@@ -15,7 +15,10 @@ const gameSchema = new mongoose.Schema({
       userName: String,
       text: String,
       playTime: Number,
-      rating: number
+      rating: {
+        type: Number,
+        default:0
+      }
     }
   ]
   
