@@ -1,7 +1,7 @@
 const express = require("express");
 const Game = require("../models/game");
 const router = express.Router();
-const User = require("../models/user");
+const User = require("../models/users");
 const { userId, text, rating, playTime } = req.body;
 
 // Yeni oyun ekle
