@@ -7,6 +7,8 @@ const { userId, text, rating, playTime } = req.body;
 // Yeni oyun ekle
 router.post("/", async (req, res) => {
   try {
+    const { userId, text, rating, playTime } = req.body;
+
     const game = new Game(req.body);
     await game.save();
     res.status(201).json(game);
@@ -14,6 +16,7 @@ router.post("/", async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 });
+
 
 // Tüm oyunları getir
 router.get("/", async (req, res) => {
